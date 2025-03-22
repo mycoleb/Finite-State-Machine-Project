@@ -3,7 +3,7 @@ from tkinter import ttk, filedialog, messagebox
 import json
 import os
 from PIL import Image, ImageTk
-import FSM, create_dfa_a_plus_b_c_star, create_nfa_a_or_b_star_abb
+import import nfa_config.txt, dfa_config.txt
 import visualize_fsm, visualize_string_processing, animate_string_processing
 
 class FSMApp(tk.Tk):
