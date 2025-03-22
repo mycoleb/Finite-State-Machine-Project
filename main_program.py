@@ -8,10 +8,7 @@ visualize state machines, run tests, and work with configuration files.
 import os
 import sys
 import unittest
-from fsm_implementation import (
-    DFA, NFA, create_dfa_for_ab_c_star, create_nfa_for_ab_star_abb,
-    load_fsm_from_file, save_fsm_to_file
-)
+import nfa_config.txt, dfa_config.txt
 from fsm_visualizer import (
     generate_ascii_diagram, visualize_path, save_fsm_visualization
 )
