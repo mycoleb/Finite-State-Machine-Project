@@ -1,0 +1,48 @@
+[General]
+type = NFA
+name = (a|b)*abb
+
+[States]
+states = start, read_a, read_ab, read_abb
+initial_state = start
+accepting_states = read_abb
+
+[Transition_0]
+from_state = start
+symbol = a
+to_states = start, read_a
+
+[Transition_1]
+from_state = start
+symbol = b
+to_states = start
+
+[Transition_2]
+from_state = read_a
+symbol = a
+to_states = read_a
+
+[Transition_3]
+from_state = read_a
+symbol = b
+to_states = read_ab
+
+[Transition_4]
+from_state = read_ab
+symbol = a
+to_states = read_a
+
+[Transition_5]
+from_state = read_ab
+symbol = b
+to_states = read_abb
+
+[Transition_6]
+from_state = read_abb
+symbol = a
+to_states = read_a
+
+[Transition_7]
+from_state = read_abb
+symbol = b
+to_states = start

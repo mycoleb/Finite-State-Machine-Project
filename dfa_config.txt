@@ -1,0 +1,68 @@
+[General]
+type = DFA
+name = (a+b)c*
+
+[States]
+states = start, read_a_or_b, read_c, error
+initial_state = start
+accepting_states = read_a_or_b, read_c
+
+[Transition_0]
+from_state = start
+symbol = a
+to_states = read_a_or_b
+
+[Transition_1]
+from_state = start
+symbol = b
+to_states = read_a_or_b
+
+[Transition_2]
+from_state = start
+symbol = c
+to_states = error
+
+[Transition_3]
+from_state = read_a_or_b
+symbol = a
+to_states = error
+
+[Transition_4]
+from_state = read_a_or_b
+symbol = b
+to_states = error
+
+[Transition_5]
+from_state = read_a_or_b
+symbol = c
+to_states = read_c
+
+[Transition_6]
+from_state = read_c
+symbol = a
+to_states = error
+
+[Transition_7]
+from_state = read_c
+symbol = b
+to_states = error
+
+[Transition_8]
+from_state = read_c
+symbol = c
+to_states = read_c
+
+[Transition_9]
+from_state = error
+symbol = a
+to_states = error
+
+[Transition_10]
+from_state = error
+symbol = b
+to_states = error
+
+[Transition_11]
+from_state = error
+symbol = c
+to_states = error

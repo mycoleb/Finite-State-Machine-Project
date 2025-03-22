@@ -1,0 +1,73 @@
+{
+    "dfa_a_plus_b_c_star": {
+      "name": "DFA for (a+b)c*",
+      "description": "This DFA accepts strings that start with 'a' or 'b' followed by any number of 'c's",
+      "states": ["q0", "q1"],
+      "alphabet": ["a", "b", "c"],
+      "transitions": {
+        "q0": {
+          "a": "q1",
+          "b": "q1"
+        },
+        "q1": {
+          "c": "q1"
+        }
+      },
+      "start_state": "q0",
+      "accept_states": ["q1"],
+      "is_deterministic": true
+    },
+    "nfa_a_or_b_star_abb": {
+      "name": "NFA for (a|b)*abb",
+      "description": "This NFA accepts strings that end with the substring 'abb', with any number of 'a's and 'b's (including 0) before it",
+      "states": ["q0", "q1", "q2", "q3"],
+      "alphabet": ["a", "b"],
+      "transitions": {
+        "q0": {
+          "a": ["q0", "q1"],
+          "b": ["q0"]
+        },
+        "q1": {
+          "b": ["q2"]
+        },
+        "q2": {
+          "b": ["q3"]
+        }
+      },
+      "start_state": "q0",
+      "accept_states": ["q3"],
+      "is_deterministic": false
+    },
+    "custom_regex_format": {
+      "name": "Custom Regex Format",
+      "description": "This is a template for defining your own FSM based on a regular expression",
+      "format_instructions": [
+        "To define your own FSM from a regex:",
+        "1. Define all states with meaningful names",
+        "2. Specify your alphabet (all valid input symbols)",
+        "3. Define transitions following the format below",
+        "4. For NFAs, transitions can have multiple target states as arrays",
+        "5. Specify the start state and accept states"
+      ],
+      "example": {
+        "states": ["start", "state1", "state2", "accept"],
+        "alphabet": ["a", "b", "c"],
+        "transitions": {
+          "start": {
+            "a": "state1",
+            "b": "state2"
+          },
+          "state1": {
+            "c": "accept"
+          },
+          "state2": {
+            "a": ["state1", "state2"],
+            "b": "accept"
+          }
+        },
+        "start_state": "start",
+        "accept_states": ["accept"],
+        "is_deterministic": false
+      }
+    }
+  }
