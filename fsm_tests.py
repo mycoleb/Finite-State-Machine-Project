@@ -1,5 +1,5 @@
 import unittest
-import create_dfa, create_nf
+import nfa_config.txt, dfa_config.txt
 
 class TestDFA(unittest.TestCase):
     def setUp(self):
