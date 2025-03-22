@@ -1,5 +1,5 @@
 import unittest
-from fsm import FSM, create_dfa_a_plus_b_c_star, create_nfa_a_or_b_star_abb
+import create_dfa, create_nf
 
 class TestDFA(unittest.TestCase):
     def setUp(self):
