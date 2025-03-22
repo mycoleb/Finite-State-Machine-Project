@@ -3,8 +3,8 @@ from tkinter import ttk, filedialog, messagebox
 import json
 import os
 from PIL import Image, ImageTk
-from fsm import FSM, create_dfa_a_plus_b_c_star, create_nfa_a_or_b_star_abb
-from fsm_visualizer import visualize_fsm, visualize_string_processing, animate_string_processing
+import FSM, create_dfa_a_plus_b_c_star, create_nfa_a_or_b_star_abb
+import visualize_fsm, visualize_string_processing, animate_string_processing
 
 class FSMApp(tk.Tk):
     def __init__(self):
